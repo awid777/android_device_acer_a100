@@ -21,7 +21,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilt/zImage:kernel
 
 # inherit proprietary files
-$(call inherit-product-if-exists, vendor/acer/a500/a500-vendor.mk)
+$(call inherit-product-if-exists, vendor/acer/a100/a100-vendor.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 $(call inherit-product, build/target/product/full_base.mk)
 $(call inherit-product-if-exists, framework/base/data/videos/VideoPackage2.mk)
@@ -54,10 +54,10 @@ PRODUCT_PACKAGES += \
 
 # ramdisk
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/ramdisk/init.picasso.usb.rc:root/init.picasso.usb.rc \
-    $(LOCAL_PATH)/ramdisk/ueventd.picasso.rc:root/ueventd.picasso.rc \
-    $(LOCAL_PATH)/ramdisk/init.picasso.rc:root/init.picasso.rc \
-    $(LOCAL_PATH)/ramdisk/fstab.picasso:root/fstab.picasso 
+    $(LOCAL_PATH)/ramdisk/init.vangogh.usb.rc:root/init.vangogh.usb.rc \
+    $(LOCAL_PATH)/ramdisk/ueventd.vangogh.rc:root/ueventd.vangogh.rc \
+    $(LOCAL_PATH)/ramdisk/init.vangogh.rc:root/init.vangogh.rc \
+    $(LOCAL_PATH)/ramdisk/fstab.vangogh:root/fstab.vangogh 
     
 # firmware
 PRODUCT_COPY_FILES += \
@@ -116,29 +116,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilt/data/srs_processing.cfg:system/data/srs_processing.cfg \
     $(LOCAL_PATH)/prebuilt/etc/mixer_paths.xml:system/etc/mixer_paths.xml
 
-# keychars/layout
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/prebuilt/usr/idc/atmel-maxtouch.idc:system/usr/idc/atmel-maxtouch.idc \
-    $(LOCAL_PATH)/prebuilt/usr/keylayout/acer-dock.kl:system/usr/keylayout/acer-dock.kl \
-    $(LOCAL_PATH)/prebuilt/usr/keylayout/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
-    $(LOCAL_PATH)/prebuilt/usr/keychars/Acer-AK00LB.kcm:system/usr/keychars/Acer-AK00LB.kcm \
-    $(LOCAL_PATH)/prebuilt/usr/keylayout/Acer-AK00LB.kl:system/usr/keylayout/Acer-AK00LB.kl \
-    $(LOCAL_PATH)/prebuilt/usr/keylayout/Bluetooth_00_06_66_42.kl:system/usr/keylayout/Bluetooth_00_06_66_42.kl \
-    $(LOCAL_PATH)/prebuilt/usr/keylayout/Vendor_044f_Product_d007.kl:system/usr/keylayout/Vendor_044f_Product_d007.kl \
-    $(LOCAL_PATH)/prebuilt/usr/keylayout/Vendor_045e_Product_028e.kl:system/usr/keylayout/Vendor_045e_Product_028e.kl \
-    $(LOCAL_PATH)/prebuilt/usr/keylayout/Vendor_045e_Product_0719.kl:system/usr/keylayout/Vendor_045e_Product_0719.kl \
-    $(LOCAL_PATH)/prebuilt/usr/keylayout/Vendor_046d_Product_c216.kl:system/usr/keylayout/Vendor_046d_Product_c216.kl \
-    $(LOCAL_PATH)/prebuilt/usr/keylayout/Vendor_046d_Product_c21d.kl:system/usr/keylayout/Vendor_046d_Product_c21d.kl \
-    $(LOCAL_PATH)/prebuilt/usr/keylayout/Vendor_046d_Product_c21e.kl:system/usr/keylayout/Vendor_046d_Product_c21e.kl \
-    $(LOCAL_PATH)/prebuilt/usr/keylayout/Vendor_046d_Product_c21f.kl:system/usr/keylayout/Vendor_046d_Product_c21f.kl \
-    $(LOCAL_PATH)/prebuilt/usr/keylayout/Vendor_046d_Product_c294.kl:system/usr/keylayout/Vendor_046d_Product_c294.kl \
-    $(LOCAL_PATH)/prebuilt/usr/keylayout/Vendor_046d_Product_c299.kl:system/usr/keylayout/Vendor_046d_Product_c299.kl \
-    $(LOCAL_PATH)/prebuilt/usr/keylayout/Vendor_046d_Product_c532.kl:system/usr/keylayout/Vendor_046d_Product_c532.kl \
-    $(LOCAL_PATH)/prebuilt/usr/keylayout/Vendor_054c_Product_0268.kl:system/usr/keylayout/Vendor_054c_Product_0268.kl \
-    $(LOCAL_PATH)/prebuilt/usr/keylayout/Vendor_057e_Product_0306.kl:system/usr/keylayout/Vendor_057e_Product_0306.kl \
-    $(LOCAL_PATH)/prebuilt/usr/keylayout/Vendor_05ac_Product_0239.kl:system/usr/keylayout/Vendor_05ac_Product_0239.kl \
-    $(LOCAL_PATH)/prebuilt/usr/keylayout/Vendor_22b8_Product_093d.kl:system/usr/keylayout/Vendor_22b8_Product_093d.kl
-
 # prefer mdpi drawables where available
 PRODUCT_AAPT_CONFIG := normal mdpi hdpi xhdpi
 PRODUCT_AAPT_PREF_CONFIG := mdpi
@@ -179,7 +156,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.heapminfree=512k \
     dalvik.vm.heapmaxfree=8m
 
-PRODUCT_NAME := cm_a500
-PRODUCT_DEVICE := a500
+PRODUCT_NAME := cm_a100
+PRODUCT_DEVICE := a100
 PRODUCT_BRAND := acer
-PRODUCT_MODEL := a500
+PRODUCT_MODEL := a100
